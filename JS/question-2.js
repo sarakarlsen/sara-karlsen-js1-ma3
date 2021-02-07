@@ -19,14 +19,14 @@ async function getInfo() {
                 break;
             }
 
-            dataContainer.innerHTML += `<div class="testing">${facts[i].name} 
-        ${facts[i].rating}
+            dataContainer.innerHTML += `<div class="testing">${facts[i].name}
+        rating: ${facts[i].rating}
         </div>`;
         }
 
     } catch (error) {
         console.log("An error has accurred");
-        dataContainer.innerHTML = "An error accurred";
+        dataContainer.innerHTML = errorMessage("An error occured when calling the API");
     }
 
 
